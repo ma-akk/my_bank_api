@@ -34,15 +34,15 @@ class CardControllerTest {
                 .andExpect(content().string(containsString("500")));
     }
 
-    @Test
-    void topUpBalance() throws Exception{
-        String accountJson = "{\"cardId\":\"1\", \"summa\":10000}";
-        this.mockMvc.perform(put("/cards/balance")
-                        .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content(accountJson))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().string(containsString("\"balance\"")))
-                .andExpect(content().string(containsString("10100")));
-    }
+//     @Test
+//     void topUpBalance() throws Exception{
+//         String accountJson = "{\"cardId\":\"1\", \"summa\":10000}";
+//         this.mockMvc.perform(put("/cards/balance")
+//                         .contentType(MediaType.APPLICATION_JSON_VALUE)
+//                         .content(accountJson))
+//                 .andDo(print())
+//                 .andExpect(status().isOk())
+//                 .andExpect(content().string(containsString("\"balance\"")))
+//                 .andExpect(content().string(containsString("10100")));
+//     }
 }
